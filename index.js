@@ -12,11 +12,11 @@ function handleClick(e) {
 
 function greet(time) {
   let hour = parseInt(time.split(':')[0])
-  switch (hour) {
-    case hour < 12:
+  switch (true) {
+    case (hour < 12):
       return "Good Morning";
       break;
-    case hour >= 12 && hour <= 17:
+    case (hour >= 12 && hour <= 17):
       return "Good Afternoon";
       break;
     default:
@@ -26,6 +26,6 @@ function greet(time) {
 }
 
 function displayMessage(string) {
-  greeting = document.getElementsById("greeting");
-  greeting.innerHTML = string;
+  let greeting = document.getElementById("greeting");
+  greeting.innerText = string;
 }
